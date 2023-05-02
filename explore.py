@@ -38,9 +38,15 @@ model_name = st.sidebar.selectbox(
 temperature = st.sidebar.number_input(
     "What temperature should we set things",
     min_value=0.0,
-    max_value=1.0,
+    max_value=2.0,
     value=0.7,
     step=0.1,
+    help="""
+    What sampling temperature to use, between 0 and 2.
+    
+    Higher values like 0.8 will make the output more random, 
+    while lower values like 0.2 will make it more focused and deterministic.
+    """
 )
 chat = get_chat(model_name, temperature)
 
