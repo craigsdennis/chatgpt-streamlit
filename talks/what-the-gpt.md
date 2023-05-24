@@ -3,6 +3,7 @@
 - [ ] 🚀 Gain Prompting Trust
 - [ ] 📚 Gather Pertinent Texts
   - [ ] [Completion Introduction](https://platform.openai.com/docs/guides/completion/introduction)
+  - [ ] [Learn Prompting](https://learnprompting.org)
   - [ ] [Awesome Prompts](https://prompts.chat)
 - [ ] 👨‍🏫 Guide Proven Techniques
   - [ ] Clarity

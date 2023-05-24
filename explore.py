@@ -17,13 +17,17 @@ from langchain.schema import (
 )
 
 """
-# PlatGPT Playground
+# HackGPT Playground
 
 Dive in and get your hands dirty with OpenAI. Don't worry you won't break anything.
-
-📚 [OpenAI Best Practices for Prompt Engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api)
 """
 
+with st.expander("📚 Learn more"):
+    """
+    - [OpenAI Completion Introduction](https://platform.openai.com/docs/guides/completion/introduction)
+    - [Learn Prompting](https://learnprompting.org)
+    - [Awesome Prompts](https://prompts.chat)
+    """
 
 @st.cache_resource
 def get_chat(model_name, temperature=0.7):
