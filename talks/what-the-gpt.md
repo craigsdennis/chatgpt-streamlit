@@ -13,7 +13,7 @@
   - [ ] LLM LGTM 👍
   - [ ] 20 ?'s
 - [ ] 🤺 Go Poke Things
-  - [ ] https://twil.io/platgpt
+  - [ ] https://twil.io/hackgpt
 - [ ] 🤹‍♂️ Get Pretty Talented
 - [ ] 👬👫👭 Gel Productive Teamwork
   - [ ] This [talk](https://twil.io/what-the-gpt)
