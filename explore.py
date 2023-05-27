@@ -29,6 +29,7 @@ with st.expander("📚 Learn more"):
     - [Awesome Prompts](https://prompts.chat)
     """
 
+
 @st.cache_resource
 def get_chat(model_name, temperature=0.7):
     return ChatOpenAI(model_name=model_name, temperature=temperature, max_tokens=None)
@@ -50,7 +51,7 @@ temperature = st.sidebar.number_input(
     
     Higher values like 0.8 will make the output more random, 
     while lower values like 0.2 will make it more focused and deterministic.
-    """
+    """,
 )
 chat = get_chat(model_name, temperature)
 
@@ -141,14 +142,46 @@ def import_json(json_obj):
     st.balloons()
 
 
+def get_json_from_url(url):
+    response = requests.get(url)
+    return response.json()
+
+
 def import_json_url():
     url = st.session_state["json_url"]
-    response = requests.get(url)
-    json = response.json()
+    json = get_json_from_url(url)
     return import_json(json)
 
 
+@st.cache_resource
+def retrieve_external_chat_config():
+    url = os.environ.get("JSON_CONFIG_URL", None)
+    if url is not None:
+        json = get_json_from_url(url)
+        return json
+
+
+external_chat_config = retrieve_external_chat_config()
+
 with st.sidebar:
+    if external_chat_config is not None:
+        with st.expander(external_chat_config.get("name", "Custom Hackathon Options")):
+            with st.form("saved_chats"):
+                saved_chats = external_chat_config.get("saved_chats", [])
+
+                def load_chosen_chat():
+                    chat = next((c for c in saved_chats if c["name"] == st.session_state["chosen_chat"]), None)
+                    json = get_json_from_url(chat["url"])
+                    import_json(json)
+                
+                chosen_chat = st.selectbox(
+                    "Choose a saved chat",
+                    key="chosen_chat",
+                    options=(chat["name"] for chat in saved_chats)
+                )
+                st.form_submit_button("Load",
+                    on_click=load_chosen_chat)
+
     with st.expander("Additional storage and retrieval options"):
         with st.form("import_json_url"):
             json_url = st.text_input("Import from JSON URL", key="json_url")

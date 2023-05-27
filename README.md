@@ -23,3 +23,19 @@ python -m pip install -r requirements.txt
 ```
 streamlit run explore.py
 ```
+
+## External Configuration
+
+There may be cases where you want to add some additional options based on the hackathon needs. It will add a new section to the sidebar below the system prompt. You can host JSON configuration that looks like this:
+
+```json
+{
+  "name": "The Name of your Hackathon",
+  "saved_chats": [
+    {
+      "name": "The name of the chat",
+      "url": "https://example.com/saved-chat.json"
+    }
+  ]
+}
+```
