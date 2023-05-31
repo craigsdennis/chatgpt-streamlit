@@ -10,7 +10,22 @@
 - [ ] 💡 Good example use cases
 - [ ] 🤷‍♂️ And some others...hallucinating?
 - [ ] (::) Speaking of context...
-- [ ] 👨‍🏫 Workshops
-  - [ ] 👷‍♂️ What the GPT? Prompt engineering
-  - [ ] 💻 API 101? What’s an embedding? How do you use the APIs?
-  - [ ] 🧰 Open the toolbox. Intro to Langchain, etc.
+
+## Guided Practical Tips
+- [ ] 🚀 Gain Prompting Trust
+- [ ] 📚 Gather Pertinent Texts
+  - [ ] [Completion Introduction](https://platform.openai.com/docs/guides/completion/introduction)
+  - [ ] [Learn Prompting](https://learnprompting.org)
+  - [ ] [Awesome Prompts](https://prompts.chat)
+- [ ] 👨‍🏫 Guide Proven Techniques
+  - [ ] Clarity
+  - [ ] Focus
+  - [ ] Relevance
+- [ ] 🧠⛈️ Generate Potential Themes
+  - [ ] LLM LGTM 👍
+  - [ ] 🙋‍♂️ 20 ?'s
+- [ ] 🤺 Go Poke Things
+  - [ ] https://twil.io/hackgpt
+- [ ] 🤹‍♂️ Get Pretty Talented
+- [ ] 👬👫👭 Gel Productive Teamwork
+  - [ ] This [talk](https://twil.io/what-the-gpt)

@@ -62,6 +62,7 @@ if "system_locked" not in st.session_state:
 system_prompter = st.sidebar.text_area(
     "How should the system behave?",
     key="system_prompter",
+    height=300,
     help="""
     This is the ChatGPT System Prompt. 
     
