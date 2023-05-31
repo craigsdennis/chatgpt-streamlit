@@ -12,6 +12,7 @@
 - [ ] (::) Speaking of context...
 
 ## Guided Practical Tips
+
 - [ ] 🚀 Gain Prompting Trust
 - [ ] 📚 Gather Pertinent Texts
   - [ ] [Completion Introduction](https://platform.openai.com/docs/guides/completion/introduction)
